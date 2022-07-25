@@ -5,10 +5,12 @@
     /* 标准盒子 */
     box-sizing: border-box;
 }
+
 body {
-    font-family: "Poppins,sans-serif";
+    font-family: "Poppins,sans-serif", serif;
     overflow: hidden;
 }
+
 .wave {
     position: fixed;
     bottom: 0;
@@ -16,24 +18,28 @@ body {
     height: 100%;
     z-index: -1;
 }
+
 .container {
     width: 100vw;
     height: 100vh;
     /* 网格布局 */
     display: grid;
-    grid-template-columns: repeat(2,50%);
+    grid-template-columns: repeat(2, 50%);
     grid-gap: 7rem;
     padding: 0 2rem;
 }
+
 .img {
     display: flex;
     /* 右对齐 */
-    justify-content: flex-end;  
+    justify-content: flex-end;
     align-items: center;
 }
+
 .img img {
     width: 500px;
 }
+
 .login-content {
     display: flex;
     /* 左对齐 */
@@ -41,43 +47,52 @@ body {
     align-items: center;
     text-align: center;
 }
+
 form {
     width: 360px;
 }
+
 .login-content img {
     height: 100px;
 }
+
 .login-content h2 {
     margin: 15px 0;
     color: #333;
     text-transform: uppercase;
     font-size: 2.9rem;
 }
+
 .login-content .input-div {
-    display: relative;
+    /*display: relative;*/
     display: grid;
     grid-template-columns: 7% 93%;
     margin: 25px 0;
     padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
 }
+
 .login-content .input-div .one {
     margin-top: 0;
 }
+
 .i {
     color: #d9d9d9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .i i {
     transition: .3s;
 }
-.input-div > div {
+
+.input-div>div {
     position: relative;
     height: 45px;
 }
-.input-div > div > h5 {
+
+.input-div>div>h5 {
     position: absolute;
     left: 10px;
     top: 50%;
@@ -86,7 +101,8 @@ form {
     font-size: 18px;
     transition: .3s;
 }
-.input-div > div > input {
+
+.input-div>div>input {
     position: absolute;
     left: 0;
     top: 0;
@@ -101,19 +117,24 @@ form {
     font-size: 1.2rem;
     color: #555;
 }
+
 .input-div.focus {
     border-color: #38d39f;
 }
-.input-div.focus > div > h5 {
+
+.input-div.focus>div>h5 {
     top: -5px;
     font-size: 15px;
 }
-.input-div.focus > .i > i {
+
+.input-div.focus>.i>i {
     color: #38d39f;
 }
+
 .input-div.pass {
     margin-bottom: 4px;
 }
+
 a {
     display: block;
     text-align: right;
@@ -122,9 +143,11 @@ a {
     font-size: 0.9rem;
     transition: 0.3s;
 }
+
 a:hover {
     color: #38d39f;
 }
+
 .btn {
     display: block;
     width: 100%;
@@ -140,37 +163,46 @@ a:hover {
     cursor: pointer;
     transition: 0.5s;
 }
+
 .btn:hover {
     background-position: right;
 }
+
 /* 自适应布局 */
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
     .container {
         grid-gap: 5rem;
     }
 }
-@media screen and (max-width: 1000px){
+
+@media screen and (max-width: 1000px) {
     form {
         width: 290px;
     }
+
     .login-content h2 {
         font-size: 2.4rem;
         margin: 8px 0;
     }
+
     .img img {
         width: 400px;
     }
 }
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 900px) {
     .container {
         grid-template-columns: 1fr;
     }
+
     .img {
         display: none;
     }
+
     .wave {
         display: none;
     }
+
     .login-content {
         justify-content: center;
     }
